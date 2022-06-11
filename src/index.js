@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes,} from "react-router-dom";
 import App from "./App";
+import Invoices from "./components/Invoices";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,6 +12,7 @@ root.render(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App/>}/>
+                <Route path="/invoices" element={<Invoices/>}/>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
