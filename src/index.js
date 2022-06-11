@@ -15,6 +15,7 @@ root.render(
                 <Route path="/" element={<App/>}>
                     <Route path="invoices" element={<Invoices/>}/>
                     <Route path="expenses" element={<Expenses/>}/>
+                    <Route path="*" element={<main style={{padding: "1rem"}}> Whoops! This url does not exist</main>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
