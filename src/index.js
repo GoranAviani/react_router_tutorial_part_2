@@ -6,6 +6,7 @@ import {BrowserRouter, Route, Routes,} from "react-router-dom";
 import App from "./App";
 import Invoices from "./components/Invoices";
 import Expenses from "./components/Expenses";
+import Invoice from "./components/Invoice";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +14,9 @@ root.render(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App/>}>
-                    <Route path="invoices" element={<Invoices/>}/>
+                    <Route path="invoices" element={<Invoices/>}>
+                        <Route path=":invoiceID" element={<Invoice/>}/>
+                    </Route>
                     <Route path="expenses" element={<Expenses/>}/>
                     <Route path="*" element={<main style={{padding: "1rem"}}> Whoops! This url does not exist</main>}/>
                 </Route>
